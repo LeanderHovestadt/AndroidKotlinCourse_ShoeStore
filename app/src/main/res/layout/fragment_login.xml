@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".screens.login.LoginFragment">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/login_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_gradient_135"
+        android:paddingLeft="@dimen/fragment_horizontal_padding"
+        android:paddingTop="@dimen/fragment_vertical_padding"
+        android:paddingRight="@dimen/fragment_horizontal_padding"
+        android:paddingBottom="@dimen/fragment_vertical_padding">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_banner_foreground"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/username"
+            style="@style/input_textbox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginEnd="@dimen/margin_medium"
+            android:hint="@string/prompt_email"
+            android:inputType="textEmailAddress"
+            android:selectAllOnFocus="true"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toTopOf="@+id/register_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            app:layout_constraintVertical_bias="0.100000024" />
+
+        <EditText
+            android:id="@+id/password"
+            style="@style/input_textbox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginEnd="@dimen/margin_medium"
+            android:hint="@string/prompt_password"
+            android:imeActionLabel="@string/action_sign_in"
+            android:imeOptions="actionDone"
+            android:inputType="textPassword"
+            android:selectAllOnFocus="true"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/username" />
+
+        <Button
+            android:id="@+id/loginButton"
+            style="@style/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="@dimen/magin_horizontal_button"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="@dimen/magin_horizontal_button"
+            android:paddingLeft="@dimen/padding_horizontal_button"
+            android:paddingTop="@dimen/padding_button_vertical"
+            android:paddingRight="@dimen/padding_horizontal_button"
+            android:paddingBottom="@dimen/padding_button_vertical"
+            android:text="@string/action_sign_in"
+            app:layout_constraintBottom_toTopOf="@+id/register_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/password"
+            app:layout_constraintVertical_bias="0.19999999" />
+
+        <Button
+            android:id="@+id/register_button"
+            style="@style/button_footer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="@dimen/magin_horizontal_button"
+            android:layout_marginEnd="@dimen/magin_horizontal_button"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:paddingLeft="@dimen/padding_horizontal_button"
+            android:paddingTop="@dimen/padding_button_vertical"
+            android:paddingRight="@dimen/padding_horizontal_button"
+            android:paddingBottom="@dimen/padding_button_vertical"
+            android:text="@string/action_register"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ProgressBar
+            android:id="@+id/loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="64dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="64dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/password"
+            app:layout_constraintStart_toStartOf="@+id/password"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.3" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

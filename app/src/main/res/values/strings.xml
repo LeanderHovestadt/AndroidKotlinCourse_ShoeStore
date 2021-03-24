@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">ShoeStore</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in</string>
+    <string name="action_register">Register...</string>
+    <string name="welcome">"Welcome!"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="welcome_text_1">ShoeStore - your partner for relaxed online shopping</string>
+    <string name="welcome_text_2">Shoes, shoes, shoes. All is about Shoes!</string>
+    <string name="welcome_button_text">Continue!</string>
+    <string name="instruction_text_1">ShoeStore - Instructions</string>
+    <string name="instruction_text_2">This is some serious information about this store. Please read it carefully. We offer you the BEST prices out there in the internet. If you got some issues or questions, feel free to contact our support team. Have a great shopping!</string>
+    <string name="instruction_button_text">Start Shopping!</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="name_text_description">Name:</string>
+    <string name="brand_text_description">Company:</string>
+    <string name="size_text_description">Shoe size:</string>
+    <string name="description_text_description">Description:</string>
+    <string name="shoe_item_text">Shoe</string>
+    <string name="shopping_logo">shopping logo</string>
+    <string name="logout">logout</string>
+    <string name="save_button">save</string>
+    <string name="cancel_button">cancel</string>
+    <string name="separator">|</string>
+</resources>

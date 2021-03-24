@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".screens.shoeItem.ShoeDetailFragment">
+
+    <data>
+        <variable
+            name="Shoe"
+            type="com.udacity.shoestore.models.Shoe" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_gradient_135">
+
+        <ImageView
+            android:id="@+id/shoeDetailImageView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="@dimen/margin_big"
+            android:layout_marginTop="@dimen/margin_big"
+            android:layout_marginRight="@dimen/margin_big"
+            android:layout_marginBottom="@dimen/margin_big"
+            app:layout_constraintBottom_toTopOf="@+id/editTextShoeName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_image_24" />
+
+        <EditText
+            android:id="@+id/editTextShoeName"
+            style="@style/input_textbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_big"
+            android:layout_marginRight="@dimen/margin_big"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:ems="10"
+            android:hint="@string/name_text_description"
+            android:text="@{Shoe.name}"
+            android:inputType="textPersonName"
+            app:layout_constraintBottom_toTopOf="@+id/editTextShoeBrand"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/shoeDetailImageView"
+            tools:text="Five Ten Freerider" />
+
+        <EditText
+            android:id="@+id/editTextShoeBrand"
+            style="@style/input_textbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_big"
+            android:layout_marginRight="@dimen/margin_big"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:ems="10"
+            android:hint="@string/brand_text_description"
+            android:text="@{Shoe.company}"
+            android:inputType="textPersonName"
+            app:layout_constraintBottom_toTopOf="@+id/editTextShoeSize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextShoeName"
+            tools:text="Adidas" />
+
+        <EditText
+            android:id="@+id/editTextShoeSize"
+            style="@style/input_textbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_big"
+            android:layout_marginRight="@dimen/margin_big"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:ems="10"
+            android:hint="@string/size_text_description"
+            android:inputType="number"
+            android:text="@={`` + Shoe.size}"
+            app:layout_constraintBottom_toTopOf="@+id/editTextShoeDescription"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextShoeBrand"
+            tools:text="42" />
+
+        <EditText
+            android:id="@+id/editTextShoeDescription"
+            style="@style/input_textbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_big"
+            android:layout_marginRight="@dimen/margin_big"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="@string/description_text_description"
+            android:text="@{Shoe.description}"
+            android:inputType="textMultiLine"
+            app:layout_constraintBottom_toTopOf="@+id/saveButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextShoeSize"
+            tools:text="This shoe is the most fashion thing shoe on the market. Drop into the full experience of ShribbleShoe." />
+
+        <Button
+            android:id="@+id/cancelButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_big"
+            android:layout_marginRight="@dimen/margin_big"
+            android:text="@string/cancel_button"
+            style="@style/button"
+            app:layout_constraintBaseline_toBaselineOf="@+id/saveButton"
+            app:layout_constraintEnd_toStartOf="@+id/saveButton"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/saveButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_big"
+            android:layout_marginBottom="@dimen/margin_big"
+            android:text="@string/save_button"
+            style="@style/button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/cancelButton" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/fab_margin"
+            android:layout_marginTop="@dimen/fab_margin"
+            android:clickable="true"
+            android:src="@drawable/ic_delete"
+            app:backgroundTint="@color/primary_5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,26 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="fragment_horizontal_margin">16dp</dimen>
+    <dimen name="fragment_vertical_margin">16dp</dimen>
+    <dimen name="fragment_horizontal_padding">16dp</dimen>
+    <dimen name="fragment_vertical_padding">16dp</dimen>
+    <dimen name="margin_medium">24dp</dimen>
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin_big">32dp</dimen>
+    <dimen name="margin_extra_large">64dp</dimen>
+    <dimen name="TextBoxTextSize">24dp</dimen>
+    <dimen name="ButtonTextSize">20dp</dimen>
+    <dimen name="textViewTextSize">16dp</dimen>
+    <dimen name="BoxRadius">5dp</dimen>
+    <dimen name="BoxStrokeWidth">2dp</dimen>
+    <dimen name="padding_horizontal_button">16dp</dimen>
+    <dimen name="padding_button_vertical">5dp</dimen>
+    <dimen name="magin_horizontal_button">48dp</dimen>
+    <dimen name="margin_bottom_button">64dp</dimen>
+    <dimen name="duration_animation_slide">700</dimen>
+    <dimen name="fab_margin">24dp</dimen>
+    <dimen name="shoe_item_height">250dp</dimen>
+    <dimen name="shoeItemDescriptionWidth">80dp</dimen>
+    <dimen name="shoe_item_height_total">265dp</dimen>
+    <dimen name="nav_header_height">100dp</dimen>
+</resources>

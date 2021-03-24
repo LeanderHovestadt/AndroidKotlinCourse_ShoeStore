@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".screens.welcome.WelcomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/welcome_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_gradient_45"
+        android:paddingLeft="@dimen/fragment_horizontal_padding"
+        android:paddingTop="@dimen/fragment_vertical_padding"
+        android:paddingRight="@dimen/fragment_horizontal_padding"
+        android:paddingBottom="@dimen/fragment_vertical_padding">
+
+        <TextView
+            android:id="@+id/welcome_text_1"
+            style="@style/welcome_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:gravity="center"
+            android:inputType="textMultiLine"
+            android:text="@string/welcome_text_1"
+            app:layout_constraintBottom_toTopOf="@+id/welcome_text_2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.25"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/welcome_text_2"
+            style="@style/welcome_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_big"
+            android:ems="10"
+            android:gravity="center"
+            android:inputType="textMultiLine"
+            android:text="@string/welcome_text_2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.75"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/welcome_button"
+            style="@style/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/welcome_button_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/welcome_text_2"
+            app:layout_constraintVertical_bias="0.75" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

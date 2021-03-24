@@ -1,0 +1,68 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Theme customization. -->
+        <item name="colorPrimary">@color/primary_2</item>
+        <item name="colorPrimaryDark">@color/primary_1</item>
+        <item name="colorAccent">@color/primary_4</item>
+    </style>
+
+    <style name="input_textbox" parent="Widget.AppCompat.EditText">
+        <item name="android:background">@drawable/rounded_box</item>
+        <item name="android:textSize">@dimen/TextBoxTextSize</item>
+        <item name="android:textColor">@color/primary_1</item>
+        <item name="android:alpha">0.5</item>
+        <item name="android:fontFamily">@font/assistant</item>
+    </style>
+
+    <style name="button" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:background">@drawable/button</item>
+        <item name="android:textColor">@color/primary_1</item>
+        <item name="android:alpha">0.9</item>
+        <item name="android:fontFamily">@font/assistant</item>
+        <item name="android:paddingLeft">@dimen/padding_horizontal_button</item>
+        <item name="android:paddingRight">@dimen/padding_horizontal_button</item>
+        <item name="android:paddingTop">@dimen/padding_button_vertical</item>
+        <item name="android:paddingBottom">@dimen/padding_button_vertical</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="button_decline" parent="@style/button">
+        <item name="android:background">@drawable/button_decline</item>
+        <item name="android:textColor">@color/primary_1</item>
+        text
+    </style>
+
+    <style name="button_footer" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textColor">@color/secondary_2</item>
+        <item name="android:alpha">0.9</item>
+        <item name="android:strokeColor">@android:color/transparent</item>
+        <item name="android:fontFamily">@font/assistant</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="normal_text">
+        <item name="android:textColor">@color/secondary_2</item>
+        <item name="android:fontFamily">@font/assistant</item>
+        <item name="android:textSize">@dimen/textViewTextSize</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="welcome_text" parent="normal_text">
+        <item name="android:lines">2</item>
+        <item name="android:maxLines">2</item>
+    </style>
+
+    <style name="instruction_text" parent="normal_text">
+        <item name="android:lines">8</item>
+        <item name="android:maxLines">8</item>
+    </style>
+
+    <style name="Widget.Theme.AppCompat.DayNight.NoActionBar.MyView" parent="">
+        <item name="android:background">@color/gray_400</item>
+        <item name="exampleColor">@color/light_blue_400</item>
+    </style>
+
+</resources>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".screens.shoeList.ShoeListFragment">
+
+    <data>
+        <variable
+            name="ShoeListViewModel"
+            type="com.udacity.shoestore.screens.shoeList.ShoeListViewModel" />
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/show_list_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_gradient_45"
+        android:paddingLeft="@dimen/fragment_horizontal_padding"
+        android:paddingTop="@dimen/fragment_vertical_padding"
+        android:paddingRight="@dimen/fragment_horizontal_padding"
+        android:paddingBottom="@dimen/fragment_vertical_padding">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/shoe_list_linear_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:animateLayoutChanges="true">
+
+            </LinearLayout>
+        </ScrollView>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginEnd="@dimen/fab_margin"
+            android:layout_marginBottom="@dimen/fab_margin"
+            android:backgroundTint="@color/secondary_2"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/ic_add"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

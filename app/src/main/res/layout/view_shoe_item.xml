@@ -1,0 +1,113 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".screens.shoeList.ShoeItemView">
+
+    <data>
+        <variable
+            name="Shoe"
+            type="com.udacity.shoestore.models.Shoe" />
+    </data>
+
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/shoe_item_height_total"
+    android:id="@+id/shoe_item">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/shoe_item_height"
+        android:layout_margin="@dimen/margin_small"
+        android:background="@drawable/round_box_shoelist">
+
+        <ImageView
+            android:id="@+id/shoeDetailImageView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="200dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_image_24" />
+
+        <TextView
+            android:id="@+id/textView"
+            style="@style/normal_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:text="@{Shoe.name}"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/shoeDetailImageView"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Five Ten Freerider" />
+
+        <TextView
+            android:id="@+id/viewShoeItemSize"
+            style="@style/normal_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_big"
+            android:text="@{`` + Shoe.size}"
+            android:textStyle="italic"
+            app:layout_constraintBaseline_toBaselineOf="@+id/viewShoeItemSeparator"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/viewShoeItemSeparator"
+            tools:text="42" />
+
+        <TextView
+            android:id="@+id/viewShoeItemSeparator"
+            style="@style/normal_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_big"
+            android:text="@string/separator"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/viewShoeItemSize"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/viewShoeItemCompany"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            tools:text="|" />
+
+        <TextView
+            android:id="@+id/viewShoeItemCompany"
+            style="@style/normal_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_big"
+            android:text="@{`` + Shoe.company}"
+            android:textStyle="italic"
+            app:layout_constraintBaseline_toBaselineOf="@+id/viewShoeItemSeparator"
+            app:layout_constraintEnd_toStartOf="@+id/viewShoeItemSeparator"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/shoeDetailImageView"
+            tools:text="Adidas" />
+
+        <TextView
+            android:id="@+id/viewShoeItemDescription"
+            style="@style/normal_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginRight="@dimen/margin_medium"
+            android:layout_marginBottom="@dimen/margin_big"
+            android:text="@{Shoe.description}"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/shoeDetailImageView"
+            app:layout_constraintTop_toBottomOf="@+id/viewShoeItemSeparator"
+            tools:text="This shoe is just amazing! Look at the front. Awesome thing you got there brah!" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
+</layout>
