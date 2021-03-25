@@ -12,16 +12,13 @@ import timber.log.Timber
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var drawerLayout: DrawerLayout
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         Timber.plant(Timber.DebugTree())
         Timber.i("onCreate called.")
 
-        val binding = DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
-        drawerLayout = binding.drawerLayout
+        DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
     }
 
 }

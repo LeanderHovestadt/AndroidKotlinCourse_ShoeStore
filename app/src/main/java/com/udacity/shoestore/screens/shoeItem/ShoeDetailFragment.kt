@@ -45,11 +45,11 @@ class ShoeDetailFragment : Fragment() {
             ) {
                 Toast.makeText(context, "Please enter valid data.", Toast.LENGTH_LONG).show()
             } else {
-                // TODO: make sure why the binding does not get updated automatically and why we can not just use shoe here
                 v.findNavController().navigate(
                     ShoeDetailFragmentDirections.actionShoeDetailFragmentToShoeListFragment(
+                        binding.shoe ?:
                         Shoe(
-                            binding.shoe?.id ?: UUID.randomUUID().toString(),
+                            UUID.randomUUID().toString(),
                             binding.editTextShoeName.text.toString(),
                             binding.editTextShoeSize.text.toString().toDoubleOrNull() ?: 0.0,
                             binding.editTextShoeBrand.text.toString(),

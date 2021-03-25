@@ -9,11 +9,14 @@
             type="com.udacity.shoestore.models.Shoe" />
     </data>
 
+    <!--used a FrameLayout here with a fixed height, because these items will be
+    inserted into a linear layout without any constraints to the height-->
 <FrameLayout
     android:layout_width="match_parent"
     android:layout_height="@dimen/shoe_item_height_total"
     android:id="@+id/shoe_item">
 
+<!--    used a ConstraintLayout here because this complex layout will dynamically fit better to any size of screens-->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/shoe_item_height"

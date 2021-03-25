@@ -11,6 +11,7 @@
     </data>
 
 
+<!--    used a ConstraintLayout here because this complex layout will dynamically fit better to any size of screens-->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/show_list_layout"
         android:layout_width="match_parent"
@@ -25,6 +26,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+<!--            used a LinearLayout here, because we will dynamically add new items here.
+            With an orientation set to vertical, we don't have to take care about the constraints.
+            Also, the items inserted will have a fixed height, so they will always fit perfectly-->
             <LinearLayout
                 android:id="@+id/shoe_list_linear_layout"
                 android:layout_width="match_parent"

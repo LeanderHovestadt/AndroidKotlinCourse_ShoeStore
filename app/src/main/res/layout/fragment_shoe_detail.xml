@@ -5,10 +5,14 @@
     tools:context=".screens.shoeItem.ShoeDetailFragment">
 
     <data>
+
         <variable
             name="Shoe"
             type="com.udacity.shoestore.models.Shoe" />
     </data>
+
+<!--    used a ConstraintLayout here because this complex layout will dynamically fit better to any size-->
+<!--    of screens-->
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -39,8 +43,8 @@
             android:layout_marginBottom="@dimen/margin_medium"
             android:ems="10"
             android:hint="@string/name_text_description"
-            android:text="@{Shoe.name}"
             android:inputType="textPersonName"
+            android:text="@={Shoe.name}"
             app:layout_constraintBottom_toTopOf="@+id/editTextShoeBrand"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
@@ -58,8 +62,8 @@
             android:layout_marginBottom="@dimen/margin_medium"
             android:ems="10"
             android:hint="@string/brand_text_description"
-            android:text="@{Shoe.company}"
             android:inputType="textPersonName"
+            android:text="@={Shoe.company}"
             app:layout_constraintBottom_toTopOf="@+id/editTextShoeSize"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
@@ -96,8 +100,8 @@
             android:ems="10"
             android:gravity="start|top"
             android:hint="@string/description_text_description"
-            android:text="@{Shoe.description}"
             android:inputType="textMultiLine"
+            android:text="@={Shoe.description}"
             app:layout_constraintBottom_toTopOf="@+id/saveButton"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
@@ -107,12 +111,12 @@
 
         <Button
             android:id="@+id/cancelButton"
+            style="@style/button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/margin_big"
             android:layout_marginRight="@dimen/margin_big"
             android:text="@string/cancel_button"
-            style="@style/button"
             app:layout_constraintBaseline_toBaselineOf="@+id/saveButton"
             app:layout_constraintEnd_toStartOf="@+id/saveButton"
             app:layout_constraintHorizontal_bias="0.5"
@@ -120,12 +124,12 @@
 
         <Button
             android:id="@+id/saveButton"
+            style="@style/button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginRight="@dimen/margin_big"
             android:layout_marginBottom="@dimen/margin_big"
             android:text="@string/save_button"
-            style="@style/button"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
